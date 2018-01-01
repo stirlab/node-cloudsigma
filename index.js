@@ -69,7 +69,7 @@ CloudSigma.prototype.put = function(path, data, queryOpts, callback) {
     method: "PUT",
     uri: this.makeUri(path),
     headers: this.headers(),
-    body: data,
+    body: data || {},
     qs: queryOpts || {},
     json: true,
   }, callback)
