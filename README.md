@@ -84,6 +84,7 @@ cloudSigma.delete("/drives/" + drive_uuid + "/", function(err, response, body) {
   console.log(err);
   console.log(body);
 });
+```
 
 ### Function signatures
 
