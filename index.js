@@ -14,7 +14,14 @@ var CloudSigma = function(username, password, datacenter) {
 
 CloudSigma.prototype.makeAuth = function() {
   var authString = format('%s:%s', this.username, this.password);
-  return Buffer.from(authString).toString('base64')
+  var buffer;
+  if (typeof Buffer.from == 'function') {
+    buffer = Buffer.from(authString);
+  }
+  else {
+    buffer = new Buffer(authString);
+  }
+  return buffer.toString('base64');
 }
 
 CloudSigma.prototype.makeBaseUrl = function() {
