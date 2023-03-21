@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/stirlab/node-cloudsigma#readme",
   "dependencies": {
-    "request": "2.88.0"
+    "request": "2.88.2"
   }
 }
